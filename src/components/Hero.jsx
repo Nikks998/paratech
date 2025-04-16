@@ -14,8 +14,8 @@ const Hero = () => {
                     Nosotros la conseguimos por vos y la traemos a Buenos Aires. ¡Hablá con nosotros y lo hacemos realidad!
                 </p>
                 <Button asChild className={`ml-1 w-40`} size={"lg"}>
-                    <a href="#" className="font-poppins">
-                        Contactanos <LuArrowRight className="ml-2"/>
+                    <a href="#" className="font-poppins font-semibold">
+                        Contactanos <LuArrowRight className="ml-1 size-5" />
                     </a>
                 </Button>
             </div>

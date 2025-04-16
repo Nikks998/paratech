@@ -8,7 +8,7 @@ import { Button } from "./components/ui/button" */
 function App() {
   return (
     <div className="w-full">
-      <div className={`${styles.flexCenter} sticky top-0 z-10 backdrop-blur-sm border-b border-neutral-700/20 `}>
+      <div className={`${styles.flexCenter} sticky top-0 z-10 backdrop-blur-3xl border-b border-neutral-700/20 `}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
         </div>
@@ -76,7 +76,7 @@ function App() {
           </p>
         </div>
       </div>
-      
+
     </div>
 
   )
