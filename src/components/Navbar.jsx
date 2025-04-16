@@ -22,7 +22,7 @@ const navLinks = [
 
 const Navbar = () => {
     return (
-        <nav className="w-full flex py-4 justify-between items-center">
+        <nav className="w-full flex py-4 px-6 justify-between items-center">
             <a href="/">
                 <img src={logo} alt="logo" className="w-[36px] h-36px]" />
             </a>
