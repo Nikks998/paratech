@@ -5,16 +5,16 @@ import phone from '../assets/phone.mp4'
 
 const Hero = () => {
     return (
-        <section id="home" className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-            <div className={`w-full lg:w-2/3 ${styles.flexStart} flex-col xl:pl-6 px-6`}>
-                <h1 className="font-poppins font-semibold sm:text-[62px] text-[42px] sm:leading-16 leading-12">
+        <section className={`flex md:flex-row flex-col ${styles.paddingY}`}>
+            <div className={`w-full lg:w-2/3 ${styles.flexStart} flex-col xl:pl-6 px-6 font-poppins`}>
+                <h1 className="font-semibold sm:text-[62px] text-[42px] sm:leading-16 leading-12">
                     Compra en <span className="text-primary block">Ciudad del Este</span>sin moverte de tu casa
                 </h1>
                 <p className={`${styles.paragraph} text-[#71717A] max-w-[580px] my-3 ml-1`}>
                     Nosotros la conseguimos por vos y la traemos a Buenos Aires. ¡Hablá con nosotros y lo hacemos realidad!
                 </p>
                 <Button asChild className={`ml-1 w-40`} size={"lg"}>
-                    <a href="#" className="font-poppins font-semibold">
+                    <a href="#" className="font-semibold">
                         Contactanos <LuArrowRight className="ml-1 size-5" />
                     </a>
                 </Button>

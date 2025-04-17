@@ -21,11 +21,18 @@ const navLinks = [
 ];
 
 const Navbar = () => {
+
+    const handleScroll = (id) => {
+        const e = document.getElementById(id)
+        if (e) {
+            e.scrollIntoView({ behavior: 'smooth' })
+        }
+    }
     return (
-        <nav className="w-full flex py-4 px-6 justify-between items-center">
+        <nav className="w-full flex py-4 px-6 justify-between items-center font-poppins">
             <a href="/" className='flex items-center'>
-                <img src={logo} alt="logo" className="md:size-[36px] size-[25px] " />
-                <span className='text-xl tracking-tight font-poppins font-semibold'>
+                <img src={logo} alt="logo" className="md:size-[36px] size-[30px] " />
+                <span className='text-xl tracking-tight font-semibold'>
                     Para<span className='text-primary'>Tech</span>
                 </span>
             </a>
@@ -34,11 +41,14 @@ const Navbar = () => {
                     const isLast = index === navLinks.length - 1;
                     return (
                         <li key={nav.id} className='cursor-pointer mr-5 last:mr-0'>
-                            <Button asChild variant={isLast ? "default" : "link"} className={`${isLast ? "" : "text-black"}`}>
-                                <a href={`#${nav.id}`} className={`font-poppins font-semibold`}>
-                                    {nav.title}
-                                </a>
+                            <Button
+                                variant={isLast ? "default" : "link"}
+                                className={`${isLast ? "" : "text-black"} cursor-pointer`}
+                                onClick={() => handleScroll(nav.id)}
+                            >
+                                {nav.title}
                             </Button>
+
                         </li>
                     );
                 })}
