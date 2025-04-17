@@ -65,8 +65,8 @@ const Navbar = () => {
                 })}
             </ul>
             <div className="lg:hidden md:flex flex-col justify-end">
-                <button onClick={toggleNavbar} className='md:hidden'>
-                    {mobileDrawerOpen ? <MdClose size={'25px'}/> : <IoMdMenu size={'25px'}/>}
+                <button onClick={toggleNavbar} className='md:hidden flex justify-center items-center'>
+                    {mobileDrawerOpen ? <MdClose size={'30px'}/> : <IoMdMenu size={'30px'}/>}
                 </button>
             </div>
             {
