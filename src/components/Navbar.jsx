@@ -1,5 +1,11 @@
+import { useState } from 'react';
 import logo from '../assets/logo.png'
 import { Button } from './ui/button';
+import { IoMdMenu } from "react-icons/io";
+import { MdClose } from "react-icons/md";
+
+
+
 
 const navLinks = [
     {
@@ -22,10 +28,16 @@ const navLinks = [
 
 const Navbar = () => {
 
+    const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
+    const toggleNavbar = () => {
+        setMobileDrawerOpen(!mobileDrawerOpen);
+    };
+
     const handleScroll = (id) => {
         const e = document.getElementById(id)
         if (e) {
             e.scrollIntoView({ behavior: 'smooth' })
+            setMobileDrawerOpen(false)
         }
     }
     return (
@@ -48,11 +60,36 @@ const Navbar = () => {
                             >
                                 {nav.title}
                             </Button>
-
                         </li>
                     );
                 })}
             </ul>
+            <div className="lg:hidden md:flex flex-col justify-end">
+                <button onClick={toggleNavbar} className='md:hidden'>
+                    {mobileDrawerOpen ? <MdClose size={'25px'}/> : <IoMdMenu size={'25px'}/>}
+                </button>
+            </div>
+            {
+                mobileDrawerOpen && (
+                    <div className='md:hidden fixed right-2 top-18 z-20 p-4 bg-slate-50/80 rounded-xl border border-slate-300'>
+                        <ul className='flex flex-col justify-center items-center'>
+                            {navLinks.map((nav) => {
+                                return (
+                                    <li key={nav.id} className='cursor-pointer'>
+                                        <Button
+                                            variant={"link"}
+                                            className={`text-black cursor-pointer`}
+                                            onClick={() => handleScroll(nav.id)}
+                                        >
+                                            {nav.title}
+                                        </Button>
+                                    </li>
+                                );
+                            })}
+                        </ul>
+                    </div>
+                )
+            }
         </nav>
     )
 }
