@@ -1,8 +1,8 @@
 import { useState } from 'react';
-import logo from '../assets/logo.png'
 import { Button } from './ui/button';
 import { IoMdMenu } from "react-icons/io";
 import { MdClose } from "react-icons/md";
+import logo from '../assets/logo.png'
 
 
 
@@ -71,14 +71,14 @@ const Navbar = () => {
             </div>
             {
                 mobileDrawerOpen && (
-                    <div className='md:hidden fixed right-2 top-18 z-20 p-4 bg-slate-50/80 rounded-xl border border-slate-300'>
+                    <div className='md:hidden fixed right-2 top-18 z-20 p-4 bg-slate-50/80 rounded-xl border border-slate-300/70'>
                         <ul className='flex flex-col justify-center items-center'>
                             {navLinks.map((nav) => {
                                 return (
                                     <li key={nav.id} className='cursor-pointer'>
                                         <Button
                                             variant={"link"}
-                                            className={`text-black cursor-pointer`}
+                                            className={`text-black cursor-pointer font-semibold`}
                                             onClick={() => handleScroll(nav.id)}
                                         >
                                             {nav.title}
