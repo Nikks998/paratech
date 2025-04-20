@@ -5,8 +5,6 @@ import { MdClose } from "react-icons/md";
 import logo from '../assets/logo.png'
 
 
-
-
 const navLinks = [
     {
         id: "home",
