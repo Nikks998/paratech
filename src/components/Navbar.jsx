@@ -53,7 +53,7 @@ const Navbar = () => {
                         <li key={nav.id} className='cursor-pointer mr-5 last:mr-0'>
                             <Button
                                 variant={isLast ? "default" : "link"}
-                                className={`${isLast ? "" : "text-black"} cursor-pointer`}
+                                className={`${isLast ? "" : "text-black"} cursor-pointer text-[15px]`}
                                 onClick={() => handleScroll(nav.id)}
                             >
                                 {nav.title}
