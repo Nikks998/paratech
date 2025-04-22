@@ -52,7 +52,8 @@ const Benefits = () => {
                         )
                     }
                 </ul>
-                <Button className={`font-semibold bg-green-600 hover:bg-green-700 md:py-6 cursor-pointer`}>
+                <Button
+                    className={`font-semibold bg-[#18181B] hover:bg-[#18181B]/80 md:py-6 cursor-pointer`}>
                     Contactanos ahora <FaWhatsapp />
                 </Button>
             </div>
