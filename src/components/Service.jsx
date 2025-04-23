@@ -40,7 +40,7 @@ const Service = () => {
                     cardsData.map((data) => {
                         const Icon = data.icon
                         return (
-                            <div className={`py-5 flex flex-col gap-5 hover:scale-105 duration-300`} key={data.id}>
+                            <div  className={`py-5 flex flex-col gap-5 hover:scale-105 duration-300`} key={data.id}>
                                 <div className="w-full h-full bg-white rounded-sm border border-slate-300">
                                     <div className="flex flex-col p-6 pb-2">
                                         <div className={`${styles.flexCenter} size-12 bg-black/10 rounded-full mb-4`}>

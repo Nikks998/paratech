@@ -28,7 +28,7 @@ const Benefits = () => {
     return (
         <section className={`${styles.paddingY} font-poppins`}>
             <div className={`${styles.flexStart} lg:items-center flex-col`}>
-                <h2 className={`text-[28px] sm:text-[35px] lg:text-5xl text-center font-bold md:font-semibold text-black`}>
+                <h2 className={`text-[28px] sm:text-[35px] lg:text-5xl text-center font-bold md:font-semibold text-black`} data-aos="fade-up">
                     ¿Por qué elegir nuestro servicio?
                 </h2>
                 <ul className="flex flex-col gap-8 py-8 w-full">
@@ -36,7 +36,7 @@ const Benefits = () => {
                         data.map((data) => {
                             const Icon = data.icon
                             return (
-                                <li className="flex items-start gap-2 border border-slate-300 rounded-sm p-4">
+                                <li className="flex items-start gap-2 border border-slate-300 rounded-sm p-4" data-aos="fade-up">
                                     <Icon className="size-[24px] mt-1" />
                                     <div>
                                         <h3 className="font-medium text-xl">

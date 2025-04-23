@@ -6,7 +6,7 @@ import phone from '../assets/phone.mp4'
 const Hero = () => {
     return (
         <section className={`flex md:flex-row flex-col ${styles.paddingY}`}>
-            <div className={`w-full lg:w-2/3 ${styles.flexStart} flex-col xl:pl-6 px-6 font-poppins`}>
+            <div className={`w-full lg:w-2/3 ${styles.flexStart} flex-col xl:pl-6 px-6 font-poppins`} data-aos="fade-right" data-aos-duration="700">
                 <h1 className="font-semibold sm:text-[62px] text-[42px] sm:leading-16 leading-12">
                     Compra en <span className="text-primary block">Ciudad del Este</span>sin moverte de tu casa
                 </h1>
@@ -19,7 +19,7 @@ const Hero = () => {
                     </a>
                 </Button>
             </div>
-            <div className={`${styles.flexStart} hidden lg:block lg:w-[500px] lg:pr-5`}>
+            <div className={`${styles.flexStart} hidden lg:block lg:w-[500px] lg:pr-5`} data-aos="fade-left" data-aos-duration="700">
                 <video preload="auto" src={phone} className="rounded-sm w-full h-full object-cover" autoPlay loop muted playsInline></video>
             </div>
         </section>
