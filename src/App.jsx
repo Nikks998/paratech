@@ -41,6 +41,22 @@ function App() {
         </div>
       </div>
 
+      <div className={`${styles.paddingX} ${styles.flexCenter} bg-white`}>
+        <div className={`${styles.boxWidth}`}>
+          <footer className={`${styles.paddingY} ${styles.flexCenter} flex-col lg:flex-row lg:justify-between font-poppins gap-4`}>
+            <div className="">
+              <p className="text-center text-base md:text-lg">
+                © {new Date().getFullYear()} Para<span className="text-primary">Tech</span>. Todos los derechos reservados. By <a href="#" className="underline underline-offset-4">Nik</a>
+              </p>
+            </div>
+            <div className="flex gap-4 text-sm md:text-base">
+              <a href="#" className="underline underline-offset-4">Términos</a>
+              <a href="#" className="underline underline-offset-4">Privacidad</a>
+            </div>
+          </footer>
+        </div>
+      </div>
+
     </div>
 
   )
